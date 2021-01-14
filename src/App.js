@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import Form from './components/Form';
 
 class App extends Component {
   render() {
@@ -19,6 +22,12 @@ class App extends Component {
           >
             Learn React
           </a>
+          <BrowserRouter>
+          <Switch>
+            <Route exact path= "/" component={Form} />
+
+          </Switch>
+          </BrowserRouter>
         </header>
       </div>
     );
